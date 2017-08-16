@@ -2,9 +2,9 @@
 1、python只有字符串、不单独有字符<br>
 使用单引号' 或双引号" 包含的都是字符串<br>
 
-2、字符串运算：+(拼接) 和 *<br>
+2、字符串运算：加法(拼接) 和 乘法<br>
 举例：<br>
-![photo](/1001-Grammar/0000-photos/0001.png)<br>
+![photo](/C003-python/NoteBook/1001-Grammar/0000-photos/0001.png)<br>
 如果需要、你可以加上空格: first + ' ' + second<br>
 
 3、多行的文本、可以使用三重引号：<br>
