@@ -20,4 +20,3 @@ Python2      | Python3
 raw_input    | raw_input 被替换为input()
 input        | 不再用input
 print        | print()
-             | 
