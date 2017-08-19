@@ -1,17 +1,17 @@
-# Ò»¡¢ÊäÈë
-* Python2 Ö§³Öinput ºÍraw_input
-* Python3 Ö§³Öinput¡¢ raw_inputÒÑ¾­±»É¾³ı
-* ¶¼¿ÉÒÔÊä³öÌáÊ¾ĞÅÏ¢¡¢Èçinput("Enter something \r\n")
+# ä¸€ã€è¾“å…¥
+* Python2 æ”¯æŒinput å’Œraw_input
+* Python3 æ”¯æŒinputã€ raw_inputå·²ç»è¢«åˆ é™¤
+* éƒ½å¯ä»¥è¾“å‡ºæç¤ºä¿¡æ¯ã€å¦‚input("Enter something \r\n")
 
 ## raw_input (Python2)
-* ÓÃÓÚ½ÓÊÕÒ»¸östr<br>
+* ç”¨äºæ¥æ”¶ä¸€ä¸ªstr<br>
 ![photo](0000-photos/0010.png)<br>
 
 ## input (Python2)
-* ÓÃÓÚ½ÓÊÕÊı¾İ(int¡¢float¡¢str)
-* ËùÒÔÈç¹ûÊÇstr¡¢ĞèÒª¼ÓÒıºÅ£º<br>
+* ç”¨äºæ¥æ”¶æ•°æ®(intã€floatã€str)
+* æ‰€ä»¥å¦‚æœæ˜¯strã€éœ€è¦åŠ å¼•å·ï¼š<br>
 ![photo](0000-photos/0011.png)<br>
 
 ## input  (Python3)
-* ÓÃÓÚ½ÓÊÕÒ»¸östr<br>
-![photo](0000-photos/0009.png)<br>
+* ç”¨äºæ¥æ”¶ä¸€ä¸ªstr<br>
+![photo](0000-photos/0009.png)<br> 
