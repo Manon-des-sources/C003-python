@@ -1,21 +1,22 @@
-# Ò»¡¢pythonµÄÊý¾ÝÀàÐÍ
-»ù±¾ÀàÐÍ£º
+# ä¸€ã€pythonçš„æ•°æ®ç±»åž‹
+åŸºæœ¬ç±»åž‹ï¼š
 * str
 * int
 * float
-<br>Ê¹ÓÃtype()¿ÉÒÔ²é¿´Ò»¸ö¶ÔÏóµÄÀàÐÍ£º<br>
+<br>ä½¿ç”¨type()å¯ä»¥æŸ¥çœ‹ä¸€ä¸ªå¯¹è±¡çš„ç±»åž‹ï¼š<br>
 ![photo](0000-photos/0007.png)  ![photo](0000-photos/0008.png)<br>
 
 
-# ¶þ¡¢ÀàÐÍ×ª»»
-ÀàÐÍ×ª»»µÄÊµÖÊ£º<br>
-* ´´½¨ÁËÒ»¸öÐÂµÄ¶ÔÏó¡¢Ëü¸ù¾ÝÔ­À´µÄ¶ÔÏó¼°ÐèÒªµÄÀàÐÍ½øÐÐ×ª»»¶øÀ´<br>
-* Ô­À´µÄ¶ÔÏó»¹ÔÚ<br>
-<br>
-# Èý¡¢³£ÓÃº¯Êý
+# äºŒã€ç±»åž‹è½¬æ¢
+ç±»åž‹è½¬æ¢çš„å®žè´¨ï¼š<br>
+* åˆ›å»ºäº†ä¸€ä¸ªæ–°çš„å¯¹è±¡ã€å®ƒæ ¹æ®åŽŸæ¥çš„å¯¹è±¡åŠéœ€è¦çš„ç±»åž‹è¿›è¡Œè½¬æ¢è€Œæ¥<br>
+* åŽŸæ¥çš„å¯¹è±¡è¿˜åœ¨<br>
+
+# ä¸‰ã€å¸¸ç”¨å‡½æ•°
 function     | usage
 ------------ | -------------
-float()      | ½« str/int ×ª»¯Îª float
-int()        | ½« str/float ×ª»¯Îª int
-str()        | ½« int/float ×ª»¯Îª str
+float()      | å°† str/int è½¬åŒ–ä¸º float
+int()        | å°† str/float è½¬åŒ–ä¸º int
+str()        | å°† int/float è½¬åŒ–ä¸º str<br>
+
 ![photo](0000-photos/0006.png)<br>
