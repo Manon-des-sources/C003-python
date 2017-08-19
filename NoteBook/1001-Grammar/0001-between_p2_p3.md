@@ -1,22 +1,22 @@
-# Python2 ÓëPython3 µÄ²îÒì
+# Python2 ä¸Python3 çš„å·®å¼‚
 
-## ÔËËã
+## è¿ç®—
 Python2      | Python3 
 ------------ | -------------
              | 
              | 
              | 
 
-## ¹Ø¼ü×Ö
+## å…³é”®å­—
 Python2      | Python3 
 ------------ | -------------
              | 
              | 
              | 
 
-## º¯Êı
+## å‡½æ•°
 Python2      | Python3 
 ------------ | -------------
-raw_input    | raw_input ±»Ìæ»»Îªinput()
-input        | ²»ÔÙÓÃinput
-print        | print()
+raw_input    | raw_input è¢«æ›¿æ¢ä¸ºinput()
+input        | ä¸å†ç”¨input
+print        | print()
