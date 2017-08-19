@@ -1,9 +1,8 @@
-# Ò»¡¢Êä³ö
-* Python2 ÀïÃæµÄprint ÊÇ¹Ø¼ü×Ö
-* Python3 ÀïÃæµÄprint ÊÇº¯Êý
+# ä¸€ã€è¾“å‡º
+* Python2 é‡Œé¢çš„print æ˜¯å…³é”®å­—
+* Python3 é‡Œé¢çš„print æ˜¯å‡½æ•°
 <br>
 
-## »»ÐÐ
-* µ¥¶ÀÒ»¸öprint £¨»òprint() £©±íÊ¾»»ÐÐ
-* Ê¹ÓÃ'\r\n' ×Ö·û»»ÐÐ
-<br>
+## æ¢è¡Œ
+* å•ç‹¬ä¸€ä¸ªprint ï¼ˆæˆ–print() ï¼‰è¡¨ç¤ºæ¢è¡Œ
+* ä½¿ç”¨'\r\n' å­—ç¬¦æ¢è¡Œ
