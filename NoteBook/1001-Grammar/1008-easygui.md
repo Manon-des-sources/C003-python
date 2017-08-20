@@ -27,7 +27,7 @@ easygui.msgbox("You picked" + flavor)
 效果：  
 ![photo](0000-photos/0019.png)  
 
-## choicebox
+## choicebox
 ```javascript
 import easygui
 flavor = easygui.choicebox(msg = "What is your favorite ice cream flavor?",
