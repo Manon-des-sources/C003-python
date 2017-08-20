@@ -3,6 +3,6 @@
 #  测试用
 
 # =======================================================================
-print("Enter your name:" '\r\n')
-print("Hi", "how are you today?")
-input()
+import easygui
+
+
