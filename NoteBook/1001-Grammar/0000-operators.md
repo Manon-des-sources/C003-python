@@ -5,7 +5,7 @@ operator     | name          | function
  =           |               | a = b
  +=, -=      |               | a +=b, a -= b
  +, -, \*, / |               | a + b - c * d / f
- **          |               | a ** 2.5  equals  pow(a, 2.5)
+ **          |               | a ** 2.5  ==  pow(a, 2.5)
  %           |               | a % b
  ==, !=      |               | if a == b, if a != b
  <,  >       |               | if a <  b, if a >  b, if a <  b <  c
