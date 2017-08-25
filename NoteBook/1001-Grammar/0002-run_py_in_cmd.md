@@ -2,7 +2,13 @@
 * 首先安装了python 之后、在cmd里面输入'python'，能够打开python，表示python安装ok、且环境变量注册ok：  
 ![photo](0000-photos/0016.png)  
 使用exit() 可以在cmd 窗口里面推出python  
+
 * 在cmd 窗口使用cd、dir 命令进入'.py'程序所在的目录：  
 ![photo](0000-photos/0017.png)  
+
 * 直接运行这个.py 文件即可：  
 ![photo](0000-photos/0018.png)  
+
+* 运行指定版本的python(以python3 为例)：  
+先进入python3 的安装目录运行python.exe：
+![photo](0000-photos/0033.png) 
