@@ -23,7 +23,7 @@ class Hotdog:                           # 蓝图
     def __str__(self):                  # 方法 __str__
         msg = 'hot dog'
         if len(self.condiments) > 0:
-            msg += ' with '
+            msg += 'with'
         for i in self.condiments:
             msg += i + ', '
         msg = msg.strip(', ')
@@ -52,22 +52,12 @@ myDog = Hotdog()
 print(Hotdog)
 print(myDog)
 
-class Vegetable:
-    def __init__(self):
-        self.cooked_level  = 0          # 属性 1 = 熟透程度值
-        self.cooked_string = 'Raw'      # 属性 2 = 熟透程度描述
-        self.condiments    = []         # 属性 3 = 配料表
-        
-    def cook(self, time):               # 方法 烤制
-        self.cooked_level = self.cooked_level + time
-        if self.cooked_level > 6:
-            self.cooked_string = 'Charcoal'
-        elif self.cooked_level > 4:
-            self.cooked_string = 'Well-done'
-        elif self.cooked_level > 2:
-            self.cooked_string = 'Medium'
-        else:
-            self.cooked_string = 'Raw'
+print("Cooking hot dog for 4 minutes ...")
+myDog.cook(4)
+print(myDog)
 
-myVegetable = Vegetable()
-print(myVegetable)
+print("Cooking hot dog for 3 minutes ...")
+myDog.cook(3)
+print(myDog)
+
+
