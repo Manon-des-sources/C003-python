@@ -29,7 +29,7 @@ class BankAccount:                      # 类   class = BankAccount
         print("money = " + self.money)
 
     def putMoneyIn(self, money):        # 方法 存钱
-        if money > 0:
+        if money > 0：
             self.money += money
         else:
             print("money should be above 0")
@@ -58,5 +58,9 @@ class InterestAccount(BankAccount):     # 类   class = InterestAccount
 
 # ----------------------
 # 由蓝图创建多个实例(对象)
-myAccount  = BankAccount('chenchen', 1001, 1000.00)
+myAccount  = BankAccount('chenchen', 0001, 1000.00)
 myInterest = InterestAccount()
+
+# -------------------------------
+# 使用属性数据、操作对象
+
