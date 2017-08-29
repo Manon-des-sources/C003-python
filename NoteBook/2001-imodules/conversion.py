@@ -9,8 +9,11 @@
 def return_rounded_int(input_data):
     return int(input_data + 0.5)
 
+def test_():
+    print("test_")
 
 # =======================================================================
 # test section
-print(return_rounded_int(12.23))
-print(return_rounded_int(45.67))
+if __name__ == '__main__':
+    print(return_rounded_int(12.23))
+    print(return_rounded_int(45.67))
