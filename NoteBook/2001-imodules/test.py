@@ -6,10 +6,7 @@
 # =======================================================================
 # modules section
 
-import random
+import pygame
 
-list_random = []
-
-for i in range(5) :
-    list_random.append(random.randint(1, 20))
-print(list_random)
+pygame.init()
+screen = pygame.display.set_mode([320, 240])

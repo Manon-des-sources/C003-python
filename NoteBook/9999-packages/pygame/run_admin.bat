@@ -1,0 +1,1 @@
+msiexec /i D:\00-GitHub\C003-python\NoteBook\9999-packages\pygame\pygame-1.9.2a0.win32-py3.2.msi
