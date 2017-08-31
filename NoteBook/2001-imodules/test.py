@@ -6,12 +6,10 @@
 # =======================================================================
 # modules section
 
-def return_rounded_int(input_data):
-    return int(input_data + 0.5)
+import random
 
+list_random = []
 
-# =======================================================================
-# test section
-if __name__ == '__main__':
-    print(return_rounded_int(12.23))
-    print(return_rounded_int(45.67))
+for i in range(5) :
+    list_random.append(random.randint(1, 20))
+print(list_random)
