@@ -30,7 +30,7 @@ screen_size = [640, 480]
 where_is_the_ball = '0000-photos\\beach_ball.png'
 x = 50
 y = 50
-x_speed = 5
+x_speed = 5     # 移动速度，正值表示正向移动、负值表示反向移动
 y_speed = 5
 
 # init 

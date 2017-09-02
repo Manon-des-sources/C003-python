@@ -3,12 +3,9 @@
 
 # =======================================================================
 """
-来源：代码清单17-4
-问题：动画帧速率控制
+来源：代码清单17-3 
+问题：精灵碰撞检测 sprite collision 
 接口：
-说明：如果frame_race = m，而我们设置了clock.tick(n)，
-     那么、实际的移动速度就是 speed = speed * (n / m)，
-     也就是说、如果实际帧速率fps 比预期的小、我们的speed 就应该增大以跟上需要的移动速率
 """
 
 # =======================================================================
@@ -61,6 +58,7 @@ def animate(group):
         group.add(ball)
     # 刷新画面
     pygame.display.flip()
+    pygame.time.delay(10)
 
 
 # 创建初始显示面
@@ -68,9 +66,6 @@ screen_size = width, height = [640, 480]
 pygame.init()
 screen = pygame.display.set_mode(screen_size)
 screen.fill(color_white)
-
-# 创建clock对象
-clock = pygame.time.Clock()
 
 # 创建精灵组
 image_ball = '0000-photos\\beach_ball.png'
@@ -87,9 +82,5 @@ for row in range(0, 2):
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            frame_race = clock.get_fps()    # 检测当前帧速率
-            print("fram_race = ", frame_race)
             sys.exit()
     animate(group_ball)
-    # 控制帧速率为30fps
-    clock.tick(30)

@@ -27,3 +27,60 @@
 
 * 更多内容见官网或help  
 ![photo](0000-photos/0001.png)  
+
+
+# 三、常用方法
+* pygame.event.get()
+* pygame.time.delay(ms)
+
+* screen = pygame.display.set_mode([width, height])
+* screen.fill(color[])
+* screen.get_width()
+* screen.get_height()
+* screen.blit(image, [left, top])
+
+* pygame.image.load('location')
+
+* pygame.draw.lines(screen, color[], closed, plotList[], lineWidth)
+* pygame.draw.rect(screen, color[], [left, top, width, height], lineWidth)
+* pygame.display.flip()
+
+# 四、动画精灵 sprite 
+* 作为一个整体单位来进行移动的一组像素称为动画精灵 sprite，是一种图形对象  
+* 可以与其他图形对象进行交互  
+
+## 1、sprite 的属性：
+* 图像 image：sprite 显示的图片、或pygame 函数等绘制出来的图像  
+  * 使用pygame.image.load('location')方法获得  
+* 矩形区 rect：包含sprite 的矩形区域、参数就是图像边界  
+  * 使用image.get_rect()方法获得  
+  * 包含rect.left、rect.right、rect.top、rect.bottom 等属性、表示image 在screen 中的坐标、需要定位/移动image 时使用  
+如下面创建了多个动画精灵ball(\\3001-lesson_codes\\17-001-sprite.py)：  
+![photo](0000-photos/0044.png)  
+  * 包含rect.move(speed) 方法来移动图像本身  
+
+
+
+## 2、属性数据和方法
+* rect.move(speed)
+
+## 3、精灵碰撞检测(矩形碰撞)  --  pygame.sprite.spritecollide(sprite, sprite_group)
+* 检测一个精灵与其他精灵是否有碰撞的步骤：  
+  * 1、将所有精灵放入一个group
+  * 2、将一个精灵从group 中删除
+  * 3、pygame.sprite.spritecollide(sprite, sprite_group)
+  * 4、将这个精灵放回group
+* 如果不将精灵从group 中删除就进行碰撞检测，相当于检测自己与自己是否有碰撞  
+重叠也是碰撞、所有结果会返回True  
+这在\\3001-lesson_codes\\17-201-ball_shaking.py 中的表现就是精灵们自己震动  
+
+## 4、像素完美碰撞
+
+
+# 五、帧速率控制
+## 1、pygame.time.Clock()类
+* clock = pygame.time.Clock()
+* clock.tick(frequence)  --  每秒多少次
+
+## 2、Clock.get_fps()方法
+* 检查帧速率  
