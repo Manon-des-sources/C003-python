@@ -8,6 +8,11 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# ===================================
+# Source files may have no copyrights
+# ===================================
+Manning-Hello-World/
+
 # Windows Installer files
 *.cab
 *.msi
