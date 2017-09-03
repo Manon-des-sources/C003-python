@@ -54,13 +54,17 @@ class MyBallClass(pygame.sprite.Sprite):
             self.speed[0] = -self.speed[0]
             newpos = self.rect.move(self.speed)
             self.rect = newpos
-            print(self.rect)
         if self.rect.top    <= screen.get_rect().top  or  \
            self.rect.bottom >= screen.get_rect().bottom: 
             self.speed[1] = -self.speed[1]
             newpos = self.rect.move(self.speed)
             self.rect = newpos
-            print(self.rect)
+        # 这里有个bug：将ball 拖到screen 的四个角，ball 会一直在那里抖动停留
+        # 或者拖到screen 的某一边上，ball 就会一直沿着边直着走，不会反弹
+        # 原因在于如果ball 不止一两点超过边界、move() 里面会连续执行 self.speed[0] = -self.speed[0]
+        # 这导致一会儿上一会儿又下、结果就是一直出不去
+
+        # 而下面按键那里、
 
 # 创建精灵组
 image_ball = '0000-photos\\beach_ball.png'
@@ -73,12 +77,7 @@ ball       = MyBallClass(image_ball, location, speed)
 # 这些参数会影响按键灵敏度
 pygame.key.set_repeat(200, 20)
 
-# 设置定时器
-INTERVAL_1S = (pygame.USEREVENT)
-pygame.time.set_timer(INTERVAL_1S, 1000)
-
 mouse_hold = False
-direction  = 1
 # 事件处理
 while True:
     for event in pygame.event.get():
@@ -90,13 +89,13 @@ while True:
         # 按键事件
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
-                ball.rect.top -= 5
+                ball.rect.top -= 10
             elif event.key == pygame.K_DOWN:
-                ball.rect.top += 5
+                ball.rect.top += 10
             elif event.key == pygame.K_LEFT:
-                ball.rect.left -= 5
+                ball.rect.left -= 10
             elif event.key == pygame.K_RIGHT:
-                ball.rect.left += 5
+                ball.rect.left += 10
         # 鼠标事件
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_hold = True
@@ -105,12 +104,6 @@ while True:
         elif event.type == pygame.MOUSEMOTION:
             if mouse_hold:
              ball.rect.center = event.pos    # 使用鼠标的位置
-        elif event.type == INTERVAL_1S:
-            ball.rect.centery = ball.rect.centery + (30 * direction)
-            if ball.rect.top    <= screen.get_rect().top  or  \
-               ball.rect.bottom >= screen.get_rect().bottom: 
-                direction = -direction
-            
     # 控制帧速率为30fps
     clock.tick(30)
     screen.blit(back_ground, [0, 0])
