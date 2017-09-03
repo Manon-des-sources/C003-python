@@ -64,7 +64,7 @@ class MyBallClass(pygame.sprite.Sprite):
 
         # 而下面按键那里、
 
-# 创建精灵组
+# 创建精灵
 image_ball = '0000-photos\\beach_ball.png'
 location   = [10, 10]
 speed      = [1, 1]
