@@ -105,3 +105,6 @@
 使用pygame.NUMEVENTS 得到事件号的最大值  
 ![photo](0000-photos/0005.png)  
 [USEREVENT, NUMEVENTS]这个范围就是用户可以自定义的事件号范围  
+
+# 七、混音器 mixer
+接口参考代码清单18-004-pong.py  

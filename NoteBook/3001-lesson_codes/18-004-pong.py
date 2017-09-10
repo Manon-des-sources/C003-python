@@ -41,8 +41,10 @@ class MyBallClass(pygame.sprite.Sprite):
         if self.rect.left  <= screen.get_rect().left  or  \
            self.rect.right >= screen.get_rect().right:
             self.speed[0] = -self.speed[0]
+            hit_wall.play()
         if self.rect.top    <= screen.get_rect().top:
             self.speed[1] = -self.speed[1]
+            get_point.play()
             # 计算分数
             points += 1
             msg     = 'score:' + str(points) + ' ' +  \
@@ -68,6 +70,30 @@ screen = pygame.display.set_mode(screen_size)
 back_ground = pygame.Surface(screen.get_size())
 back_ground.fill(color_white)
 
+# 创建wav声音对象(适合短小的声音)
+pygame.mixer.init()
+sound_file = 'sounds\\bg_music.mp3'
+pygame.mixer.music.load(sound_file)
+pygame.mixer.music.set_volume(0.2)    # 20% 音量 
+sound_file = 'sounds\\game_over.wav'
+game_over = pygame.mixer.Sound(sound_file)
+game_over.set_volume(0.2)
+sound_file = 'sounds\\hit_paddle.wav'
+hit_paddle = pygame.mixer.Sound(sound_file)
+hit_paddle.set_volume(0.2)
+sound_file = 'sounds\\hit_wall.wav'
+hit_wall = pygame.mixer.Sound(sound_file)
+hit_wall.set_volume(0.2)
+sound_file = 'sounds\\get_point.wav'
+get_point = pygame.mixer.Sound(sound_file)
+get_point.set_volume(0.2)
+sound_file = 'sounds\\splat.wav'
+splat = pygame.mixer.Sound(sound_file)
+splat.set_volume(0.2)
+sound_file = 'sounds\\new_life.wav'
+new_life = pygame.mixer.Sound(sound_file)
+new_life.set_volume(0.2)
+
 # 创建ball 精灵
 image_ball = '0000-photos\\wackyball.bmp'
 speed      = [10, 5]
@@ -90,6 +116,7 @@ textpos = [10, 10]
 # 创建clock对象
 clock = pygame.time.Clock()
 
+pygame.mixer.music.play(-1)
 
 # 事件处理
 while True:
@@ -109,6 +136,7 @@ while True:
     # ball 与paddle 碰撞则反弹
     if pygame.sprite.spritecollide(paddle, ball_group, False):
         ball.speed[1] = -ball.speed[1]
+        hit_paddle.play()
     # 移动ball
     ball.move()
     # 刷新显示
@@ -118,7 +146,12 @@ while True:
     # 生命值
     if ball.rect.top >= screen.get_rect().bottom:
         lives -= 1
+        splat.play()
         if lives == 0:
+            pygame.time.delay(1000)
+            game_over.play()
+            pygame.time.delay(1000)
+            pygame.mixer.music.fadeout(2000)    # 以淡出的方式结束背景音乐
             final_text1 = "Game Over"
             final_text2 = "Your final score is: " + str(points)
             ft1_font = pygame.font.Font(None, 70)
@@ -127,8 +160,11 @@ while True:
             ft2_surf = font.render(final_text2, 1, color_red)
             screen.blit(ft1_surf, [screen.get_width()/2 - ft1_surf.get_width()/2, 100])
             screen.blit(ft2_surf, [screen.get_width()/2 - ft2_surf.get_width()/2, 200])
+            # 游戏结束后、小球不再移动(这里必须赋值为list而不是tuple、否则它将不可修改)
+            ball.speed = [0, 0]
         else:
             pygame.time.delay(2000)
+            new_life.play()
             ball.rect.topleft = [screen.get_rect().width - 40*lives, 20]
     for i in range(lives):
         width = screen.get_rect().width
