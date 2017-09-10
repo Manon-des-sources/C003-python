@@ -1,4 +1,5 @@
 # Python2 与Python3 的差异
+* 更多内容见help(F1打开)
 
 ## 运算
 Python2      | Python3 
