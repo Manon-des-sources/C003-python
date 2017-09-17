@@ -14,4 +14,8 @@ operator     | name          | function
  and         |               | if (a < b) and (b < c)
  or          |               | if (a < b) or  (b > c)
  not         |               | if not (a < b)
+ <<, >>      |               | 左移, 右移
+ &, |        |               | 按位与, 按位或
+ ^           |               | 按位异或
+ ~           |               | 按位取反
  .           |               | 
